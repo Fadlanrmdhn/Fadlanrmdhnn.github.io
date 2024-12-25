@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styledisini/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    >
+
+    <!-- Font Awesome 5.15.4 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+
+
+</head>
+<body>
+    <header class="navbar-container" style="position: sticky; top: 0;">
+        <div class="logo">
+            <img src="img/logo skyproject.png" alt="SkyProject">
+        </div>
+        <!--navbar-->
+        <nav class="nav-list">
+            <ul>
+                <li><a href="home.html" target="_self">About Me</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Skill">Skill</a></li>
+                <button id="themeToggle">🌙 Dark Mode</button>
+                <script>
+                    const themeToggle = document.getElementById("themeToggle"); // Ambil tombol
+                    const body = document.body; // Ambil elemen body
+
+                    // Cek dan simpan mode tema di localStorage
+                    if (localStorage.getItem("theme") === "dark") {
+                        body.classList.add("dark-mode");
+                        themeToggle.textContent = "☀️ Light Mode"; // Ubah teks tombol
+                    }
+
+                    // Event listener untuk mengubah tema
+                    themeToggle.addEventListener("click", function () {
+                        if (body.classList.contains("dark-mode")) {
+                            body.classList.remove("dark-mode"); // Hapus tema gelap
+                            themeToggle.textContent = "🌙 Dark Mode"; // Ubah teks tombol
+                            localStorage.setItem("theme", "light"); // Simpan preferensi ke localStorage
+                        } else {
+                            body.classList.add("dark-mode"); // Tambah tema gelap
+                            themeToggle.textContent = "☀️ Light Mode"; // Ubah teks tombol
+                            localStorage.setItem("theme", "dark"); // Simpan preferensi ke localStorage
+                        }
+                    });
+
+                </script>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section class="home">
+        <div data-aos="zoom-in" data-aos-delay="500" class="home-image">
+            <img src="img/profilportfolio.jpg" alt="">
+        </div>
+        
+        <div data-aos="zoom-in" data-aos-delay="500" class="home-content">
+            <h1>Hallo, Saya <span>Fadlanrmdhnnn</span></h1>
+            <h3 class="typing-text">saya adalah <span></span></h3>
+            <p>Saya Fadlan Septian Ramadhan, siswa SMK WIKRAMA BOGOR yang berfokus
+               pada pengembangan web dan pemrograman perangkat lunak.
+                Di SkyProject, saya membagikan berbagai proyek yang mencakup desain, 
+                pengembangan front-end, dan back-end. 
+                Saya terus belajar dan berinovasi untuk menciptakan solusi digital yang efektif. 
+                Terima kasih telah mengunjungi portfolio saya!
+            </p>
+            <div data-aos="zoom-in" data-aos-delay="500" class="social-icons">
+                <a data-aos="zoom-in" data-aos-delay="500" href="https://www.linkedin.com/in/fadlan-ramadhan-143969338/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a data-aos="zoom-in" data-aos-delay="500" href=""><i class="fab fa-github"></i></a>
+                <a data-aos="zoom-in" data-aos-delay="500" href="https://www.instagram.com/_dlnrmdhnnn_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a data-aos="zoom-in" data-aos-delay="500" href="https://wa.me/6289687289371" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <a data-aos="zoom-in" data-aos-delay="500" href="CV.pdf"  download  class="btn">Download CV</a>
+        </div>
+    </section>
+
+    <main id="Portfolio">
+        <br>
+        <h2 data-aos="zoom-in" data-aos-delay="500" >Portfolios</h2>
+        <br>
+        <div data-aos="zoom-in" data-aos-delay="500" id="project" class="content">
+            <div data-aos="zoom-in" class="card">
+                <h3>Project1</h3>
+                <img src="img/project1.png" alt="project1">
+                <p>Membuat web sederhana</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="500" class="card">
+                <h3>Project2</h3>
+                <img src="img/project2.png" alt="project1">
+                <p>Membuat web sederhana</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="500" class="card">
+                <h3>Project3</h3>
+                <img src="img/Project3.png" alt="project1">
+                <p>Membuat landing page dicoding</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="500" class="card">
+                <h3>Project4</h3>
+                <img src="img/project4.png" alt="project1">
+                <p>Membuat web testimoni perusahaan</p>
+            </div>
+        </div>
+        <br>
+        <h2 data-aos="zoom-in" data-aos-delay="500">Certificate</h2>
+        <div data-aos="zoom-in" data-aos-delay="500" id="project"  class="content">
+            <div data-aos="zoom-in" class="card">
+                <h3>K3</h3>
+                <img src="img/k3.png" alt="project1">
+                <p>Keselamatan Kebekerjaan</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="500" class="card">
+                <h3>Projectdicoding</h3>
+                <img src="img/certidicoding.png" alt="project1">
+                <p>sertifikat bootcamp dicoding</p>
+            </div>
+        </div>
+        <br>
+        <h2 data-aos="zoom-in" data-aos-delay="500">Education</h2>
+        <div data-aos="zoom-in" data-aos-delay="500" id="project" class="content">
+            <div data-aos="zoom-in" class="card">
+                <h3>SDN Ciawi 1</h3>
+                <img src="img/sd.png" alt="sd">
+                <p>Kelas 1 - Kelas 6
+                    <br>
+                    2016 - 2021
+                </p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="500" class="card">
+                <h3>MTSS YASPIDA Sukabumi</h3>
+                <img src="img/smp.png" alt="smp">
+                <p>Kelas 7 - Kelas 9
+                    <br>
+                    2021 - 2024
+                </p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="500" class="card">
+                <h3>SMK WIKRAMA Bogor</h3>
+                <img src="img/sma.png" alt="sma">
+                <p>Kelas 10 - Kelas 12
+                    <br>
+                    2024 - Lulus
+                </p>
+            </div>
+        </div>
+    </main>
+    <article id="Skill">
+        <h2 data-aos="zoom-in" data-aos-delay="500">My Skill</h2>
+        <div data-aos="zoom-in" data-aos-delay="500" class="skills-area">
+            <div data-aos="zoom-in" data-aos-delay="500" class="skill">
+                <div class="skill-title">HTML</div>
+                <div class="skill-bar"></div>
+                <div class="html skill-fill">
+                    <span class="skill-percent">50%</span>
+                </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="500" class="skill">
+                <div class="skill-title">CSS</div>
+                <div class="skill-bar"></div>
+                <div class="css skill-fill">
+                    <span class="skill-percent">20%</span>
+                </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="500" class="skill">
+                <div class="skill-title">JavaScript</div>
+                <div class="skill-bar"></div>
+                <div class="js skill-fill">
+                    <span class="skill-percent">5%</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    
+    <aside>
+        <div class="social-media">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/fadlan-ramadhan-143969338/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.instagram.com/_dlnrmdhnnn_/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://wa.me/6289687289371" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            </ul>
+        </div>
+    </aside>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <footer>
+        <p>&copy; 2024 SkyProject | Presented by Fadlan</p>
+    </footer>
+</body>
+</html>
